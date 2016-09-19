@@ -78,50 +78,25 @@
 
 // SLIDER
 .sm-slider{
-	background: url("../img/bg_1.jpg") no-repeat center center;
-	background-size: cover; // skalowalnosc tla
+	//background: url("../img/bg_1.jpg") no-repeat center center;
+	//background-size: cover; // skalowalnosc tla
 
 	.orbit{
+
 		//kazdy slajd
+		
 		.orbit-slide{
-			color: $sm-white;
-			// pading dla malych urzadzen
-			padding: 5rem 0;
-			// a dla urzadzen tylko duzych
-			@include breakpoint(large){
-				padding: 10rem;
-			}
+			@include slajd;
+		}
 
-
-			p{
-				color: $sm-70p-white;
-				font-size: 1.25rem;
-				@include breakpoint(large){
-					font-size: 2.25rem;
-				}
-			}
-			h1{
-				font-size: 3.25rem;
-				text-transform: uppercase;
-				@include breakpoint(large){
-					font-size: 6rem;
-					line-height: 7rem;
-					letter-spacing: -5px;
-				}
-			}
-
-			a{
-				margin-top: 15px;
-				background: transparent;
-				border: 1px solid $sm-accent-color;
-			}
-
-			// .left-slide{
-			// 	position: absolute;
-			// 	top: 50%;
-			// 	transform: translateY(-50%);
-			// }
-
+		#slide_1{
+			background-color: black;
+		}
+		#slide_2{
+			background-color: blue;
+		}
+		#slide_3{
+			background-color: yellow;
 		}
 
 		// przyciski pod slajdami
