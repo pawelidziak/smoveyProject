@@ -541,9 +541,10 @@ $titlebar-background: $black;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+// $titlebar-icon-color: $sm-acc;
+$titlebar-icon-color: #ace600;
 $titlebar-icon-color-hover: $medium-gray;
-$titlebar-icon-spacing: 0.25rem;
+$titlebar-icon-spacing: 0.5rem;
 
 // 34. Tooltip
 // -----------

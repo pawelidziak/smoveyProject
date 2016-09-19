@@ -1,6 +1,6 @@
 // STYLE NAGLOWKA
 .sm-top{
-	background: $sm-dark-primary-color;
+	background: darken(white, 70%);
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
@@ -13,20 +13,28 @@
 	//odstep wewnetrznego elementu
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
-	
 	//menu mobilne
 	.title-bar{
+		color: $sm-accent-color;
 		background-color: transparent;
 		//te trzy linijki odpowiadaja za pozycjonowanie w pionie
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		font-size: 30px;
 	}
 	#mobile-dropdown{
 		@include sm-std-shadow;
 		background-color: $sm-white;
+		.activePage{
+			color: $sm-accent-color;
+		}
 		a{
 			color: $sm-primary-text-color;
+
+			&:hover{
+				color: $sm-accent-color;
+			}
 		}
 	}
 
@@ -34,37 +42,51 @@
 	.sm-desktop-menu{
 		// elementy w menu
 		li{
-			line-height: $sm-top-menu-h; 	// pozycjonowanie listy menu w pionie
-			height: $sm-top-menu-h;			// listy menu w pionie
-			a{
+			.activePage{
+				@include border-radius-single(10%);
+					background-color: lighten($sm-accent-color, 10%);
+					font-weight: 400;
+					color: darken(white, 70%);
 				&:hover{
-					color: $sm-primary-color;
+					color: darken(white, 70%);
 				}
 			}
+
+			line-height: $sm-top-menu-h; 	// pozycjonowanie listy menu w pionie
+			height: $sm-top-menu-h;			// listy menu w pionie
+			a{	
+				font-size: 20px;
+				
+				&:hover{
+					color: $sm-accent-color;
+				}
+			}
+			
 		}
 	
 		// elementy w pod-menu (musze sie odwolac do klasy 'submenu' - dodawanej przez skrypt JS - nie ma jej w html)
-		.submenu{
+		/* .submenu{
 			@include sm-std-shadow;
 			a {
 				color: $sm-primary-text-color;
 			}
-		}
+		} */
 	}
 
 	// logo
 	.sm-logo{
 		float: left;
-		//dla najmniejszych urzadzen wyswietlam ikone na srodku topa
+		//dla najmniejszych urzadzen wyswietlam ikone po prawej str topa
 		@include breakpoint(small only){
 			position: absolute;
-			left: 50%;
+			right: 0%;
 			transform: translateX(-50%);
 		}
 
 		// ikona jest w spanie wiec odwoluje sie do niego
 		span{
-			font-size: 40px;
+			color: $sm-accent-color;
+			font-size: 80px;
 		}
 	}
 }
@@ -82,23 +104,13 @@
 	//background-size: cover; // skalowalnosc tla
 
 	.orbit{
-
+	background: url("../img/slide.jpg") no-repeat center center;
 		//kazdy slajd
 		
 		.orbit-slide{
 			@include slajd;
 		}
-
-		#slide_1{
-			background-color: black;
-		}
-		#slide_2{
-			background-color: blue;
-		}
-		#slide_3{
-			background-color: yellow;
-		}
-
+		
 		// przyciski pod slajdami
 		.orbit-bullets{
 			position: absolute;

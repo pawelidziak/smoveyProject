@@ -37,16 +37,17 @@
 
       <!-- Mobilne menu -->
       <div class="sm-mobile-toggle title-bar show-for-small-only">
-        <button class="menu-icon" type="button" data-toggle="mobile-dropdown"></button>
+        <button class="menu-icon large" type="button" data-toggle="mobile-dropdown"></button>
+        <div class="title-bar-title">Menu</div>
       </div>
 
       <div class="sm-mobile-menu-wrapper dropdown-pane" id="mobile-dropdown" data-dropdown>
         <ul class="vertical menu">
-          <li><a href="">Start</a></li>
-          <li><a href="">Usługi</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">O nas</a></li>
-          <li><a href="">Klienci</a></li>
+          <li><a href="" class="activePage">Start</a></li>
+          <li><a href="">Zalety</a></li>
+          <li><a href="">Oferta</a></li>
+          <li><a href="">O mnie</a></li>
+          <li><a href="">Opinie</a></li>
           <li><a href="">Kontakt</a></li>
         </ul>
       </div>
@@ -54,11 +55,11 @@
       <!-- Menu desktop -->
       <div class="float-right show-for-medium">
         <ul class="dropdown menu sm-desktop-menu" data-dropdown-menu>
-          <li><a href="">Start</a></li>
-          <li><a href="">Usługi</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">O nas</a></li>
-          <li><a href="">Klienci</a></li>
+          <li><a href="" class="activePage">Start</a></li>
+          <li><a href="">Zalety</a></li>
+          <li><a href="">Oferta</a></li>
+          <li><a href="">O mnie</a></li>
+          <li><a href="">Opinie</a></li>
           <li><a href="">Kontakt</a></li>
         </ul>
       </div>
@@ -78,22 +79,20 @@
       <li class="orbit-slide" id="slide_1">    <!-- klasa narzucona, id swoje -->
         <div class="row">                       <!-- centrujemy -->
         <!-- lewa strona slajdu -->
-          <div class="medium-8 columns">        <!-- po lewej stronie zajmujemy 8kolumn -->
+          <div class="medium-12 columns slajdTlo text-center">        <!-- po lewej stronie zajmujemy 8kolumn -->
             <h1>Responsive</h1>
             <p>Mobilne oraz desktop</p>
             <a href="" class="large button">Zobacz</a>
+
           </div>
-          <!-- prawa strona slajdu -->
-          <div class="medium-4 columns show-for-medium">        <!-- po prawej stronie zajmujemy 4kolumn i widocznosc tylko dla >= medium-->
-            <img src="img/slide_1.png" alt="Slajd 1" class="text-center">
-          </div>
+          
         </div>
       </li>
 
       <!-- Jeden slajd -->
       <li class="orbit-slide" id="slide_2">
         <div class="row">
-          <div class="medium-8 columns">
+          <div class="medium-8 columns slajdTlo">
             <h1>Foundation</h1>
             <p>Mobilne oraz desktop</p>
             <a href="" class="large button">Zobacz</a>
@@ -107,7 +106,7 @@
       <!-- Jeden slajd -->
       <li class="orbit-slide" id="slide_3">
         <div class="row">
-          <div class="medium-8 columns">
+          <div class="medium-8 columns slajdTlo">
             <h1>Style SASS</h1>
             <p>Mobilne oraz desktop</p>
             <a href="" class="large button">Zobacz</a>
@@ -131,7 +130,9 @@
 </section>
 
 
-
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
