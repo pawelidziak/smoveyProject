@@ -1,0 +1,142 @@
+// STYLE NAGLOWKA
+.sm-top{
+	background: $sm-dark-primary-color;
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: $sm-top-menu-h;
+	@include sm-std-shadow;
+}
+
+// naglowek
+.top-bar{
+	//odstep wewnetrznego elementu
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	
+	//menu mobilne
+	.title-bar{
+		background-color: transparent;
+		//te trzy linijki odpowiadaja za pozycjonowanie w pionie
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	#mobile-dropdown{
+		@include sm-std-shadow;
+		background-color: $sm-white;
+		a{
+			color: $sm-primary-text-color;
+		}
+	}
+
+	// menu desktop
+	.sm-desktop-menu{
+		// elementy w menu
+		li{
+			line-height: $sm-top-menu-h; 	// pozycjonowanie listy menu w pionie
+			height: $sm-top-menu-h;			// listy menu w pionie
+			a{
+				&:hover{
+					color: $sm-primary-color;
+				}
+			}
+		}
+	
+		// elementy w pod-menu (musze sie odwolac do klasy 'submenu' - dodawanej przez skrypt JS - nie ma jej w html)
+		.submenu{
+			@include sm-std-shadow;
+			a {
+				color: $sm-primary-text-color;
+			}
+		}
+	}
+
+	// logo
+	.sm-logo{
+		float: left;
+		//dla najmniejszych urzadzen wyswietlam ikone na srodku topa
+		@include breakpoint(small only){
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		// ikona jest w spanie wiec odwoluje sie do niego
+		span{
+			font-size: 40px;
+		}
+	}
+}
+
+
+// GORNY SEPARATOR
+.sm-top-separator{
+	display: block;
+	height: $sm-top-menu-h;
+}
+
+// SLIDER
+.sm-slider{
+	background: url("../img/bg_1.jpg") no-repeat center center;
+	background-size: cover; // skalowalnosc tla
+
+	.orbit{
+		//kazdy slajd
+		.orbit-slide{
+			color: $sm-white;
+			// pading dla malych urzadzen
+			padding: 5rem 0;
+			// a dla urzadzen tylko duzych
+			@include breakpoint(large){
+				padding: 10rem;
+			}
+
+
+			p{
+				color: $sm-70p-white;
+				font-size: 1.25rem;
+				@include breakpoint(large){
+					font-size: 2.25rem;
+				}
+			}
+			h1{
+				font-size: 3.25rem;
+				text-transform: uppercase;
+				@include breakpoint(large){
+					font-size: 6rem;
+					line-height: 7rem;
+					letter-spacing: -5px;
+				}
+			}
+
+			a{
+				margin-top: 15px;
+				background: transparent;
+				border: 1px solid $sm-accent-color;
+			}
+
+			// .left-slide{
+			// 	position: absolute;
+			// 	top: 50%;
+			// 	transform: translateY(-50%);
+			// }
+
+		}
+
+		// przyciski pod slajdami
+		.orbit-bullets{
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			.is-active{
+				background-color: $sm-accent-color;
+			}
+
+			button:hover{
+				//background-color: #CACACA;
+			}
+		}
+	}
+}
