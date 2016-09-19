@@ -25,6 +25,111 @@
 <body>
 
 
+<!-- TOP -->
+<section class="sm-top">
+  <div class="row">
+    <nav class="top-bar">
+
+      <!-- Logo -->
+      <div class="sm-logo">
+        <a href=""><span class="fi-sound"></span></a>
+      </div>
+
+      <!-- Mobilne menu -->
+      <div class="sm-mobile-toggle title-bar show-for-small-only">
+        <button class="menu-icon" type="button" data-toggle="mobile-dropdown"></button>
+      </div>
+
+      <div class="sm-mobile-menu-wrapper dropdown-pane" id="mobile-dropdown" data-dropdown>
+        <ul class="vertical menu">
+          <li><a href="">Start</a></li>
+          <li><a href="">Usługi</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">O nas</a></li>
+          <li><a href="">Klienci</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <!-- Menu desktop -->
+      <div class="float-right show-for-medium">
+        <ul class="dropdown menu sm-desktop-menu" data-dropdown-menu>
+          <li><a href="">Start</a></li>
+          <li><a href="">Usługi</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">O nas</a></li>
+          <li><a href="">Klienci</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<!-- GORNY SEPARATOR -->
+<div class="sm-top-separator"></div>
+
+<!-- SLIDER -->
+<section class="sm-slider">
+  <div class="orbit" role="region" data-orbit>
+    <ul class="orbit-container">
+      
+      <!-- Jeden slajd -->
+      <li class="orbit-slide" id="slide_1">    <!-- klasa narzucona, id swoje -->
+        <div class="row">                       <!-- centrujemy -->
+        <!-- lewa strona slajdu -->
+          <div class="medium-8 columns">        <!-- po lewej stronie zajmujemy 8kolumn -->
+            <h1>Responsive</h1>
+            <p>Mobilne oraz desktop</p>
+            <a href="" class="large button">Zobacz</a>
+          </div>
+          <!-- prawa strona slajdu -->
+          <div class="medium-4 columns show-for-medium">        <!-- po prawej stronie zajmujemy 4kolumn i widocznosc tylko dla >= medium-->
+            <img src="img/slide_1.png" alt="Slajd 1" class="text-center">
+          </div>
+        </div>
+      </li>
+
+      <!-- Jeden slajd -->
+      <li class="orbit-slide" id="slide_2">
+        <div class="row">
+          <div class="medium-8 columns">
+            <h1>Foundation</h1>
+            <p>Mobilne oraz desktop</p>
+            <a href="" class="large button">Zobacz</a>
+          </div>
+          <div class="medium-4 columns show-for-medium">
+            <img src="img/slide_2.png" alt="Slajd 2" class="text-center">
+          </div>
+        </div>
+      </li>
+
+      <!-- Jeden slajd -->
+      <li class="orbit-slide" id="slide_3">
+        <div class="row">
+          <div class="medium-8 columns">
+            <h1>Style SASS</h1>
+            <p>Mobilne oraz desktop</p>
+            <a href="" class="large button">Zobacz</a>
+          </div>
+          <div class="medium-4 columns show-for-medium">
+            <img src="img/slide_3.png" alt="Slajd 3" class="text-center">
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <!-- przyciski pod sliderem -->
+    <nav class="orbit-bullets">
+      <button class="is-active" data-slide="0"><span class="show-for-sr">Szczegóły slajdu</span></button>
+      <button data-slide="1"><span class="show-for-sr">Szczegóły slajdu</span></button>
+      <button data-slide="2"><span class="show-for-sr">Szczegóły slajdu</span></button>
+    </nav>
+
+  </div>
+</section>
+
 
 
 
