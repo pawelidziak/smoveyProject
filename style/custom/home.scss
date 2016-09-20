@@ -1,6 +1,36 @@
+
+.sk-section-header{
+	margin-bottom: 2.7rem;
+	h2{
+		font-size: 2.85rem;
+	}
+}
+.nav {
+
+	// menu glowne
+	.top-bar{
+		background-color: #00FF4C;
+	}
+	.menu{
+		background-color: #00FF4C;
+		li a{
+			color: white;
+			&:hover{
+				color: black;
+			}
+		}
+	}
+
+	// menu mobilne
+	.title-bar{
+		background-color: #00FF4C;
+		text-align: center;
+	}
+}
+
 // STYLE NAGLOWKA
 .sm-top{
-	background: darken(white, 70%);
+	background: darken(white, 0%);
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
@@ -42,6 +72,7 @@
 	.sm-desktop-menu{
 		// elementy w menu
 		li{
+
 			.activePage{
 				@include border-radius-single(10%);
 					background-color: lighten($sm-accent-color, 10%);
@@ -56,9 +87,9 @@
 			height: $sm-top-menu-h;			// listy menu w pionie
 			a{	
 				font-size: 20px;
-				
+				color: black;
 				&:hover{
-					color: $sm-accent-color;
+					color: $sm-accent-color-2;
 				}
 			}
 			
@@ -85,8 +116,11 @@
 
 		// ikona jest w spanie wiec odwoluje sie do niego
 		span{
-			color: $sm-accent-color;
+			color: $sm-accent-color-2;
 			font-size: 80px;
+			&:hover{
+				color: $sm-accent-color;
+			}
 		}
 	}
 }
@@ -100,11 +134,14 @@
 
 // SLIDER
 .sm-slider{
+
+	@include sm-std-shadow;
 	//background: url("../img/bg_1.jpg") no-repeat center center;
 	//background-size: cover; // skalowalnosc tla
 
 	.orbit{
 	background: url("../img/slide.jpg") no-repeat center center;
+	// background-size: 100%;
 		//kazdy slajd
 		
 		.orbit-slide{
@@ -118,12 +155,104 @@
 			left: 50%;
 			transform: translateX(-50%);
 			.is-active{
-				background-color: $sm-accent-color;
+				background-color: $sm-accent-color-2;
 			}
 
 			button:hover{
 				//background-color: #CACACA;
 			}
 		}
+
 	}
+}
+
+
+.zmien{
+	
+	.sm-top{
+		background: darken(white, 0%);
+		position: fixed;
+		z-index: 9999;
+		width: 100%;
+		height: $sm-top-menu-h - 60px;
+		@include sm-std-shadow;
+	}
+
+	.sm-logo{
+		@include align-Y($sm-top-menu-h - 60px);
+		span{
+			font-size: 50px;
+		}
+	}
+
+	.sm-desktop-menu{
+		li{
+			@include align-Y($sm-top-menu-h - 60px);
+			a{
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+
+// SEKCJA ZALETY
+.sm-highlights{
+	@include sm-std-shadow;
+	padding: 7rem 0;
+	
+	//tytuly 
+	.sm-section-header{
+		color: $sm-secondary-text-color;
+	}
+	
+	// pojedyncza kolumna
+	.sm-highlight{
+		margin-bottom: 25px;
+		p{
+			color: $sm-87p-black;
+		}
+		h4{
+			font-size: 1.56rem;
+		}
+		
+		//ikona
+		.round-icon{
+			font-size: 4rem;
+			margin: 1.7rem 0 1rem;
+			color: $sm-accent-color-2;
+			
+
+			span{
+				&:hover{
+					color: $sm-accent-color;		
+				}
+			}
+		}
+	}
+
+}
+
+
+
+// scrollUp
+.scrollUp{
+	font-size: 50px;
+	color: $sm-accent-color;
+	opacity: 0.5;
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	display: none;
+	z-index: 9999;
+	
+	&:hover{
+		color: $sm-accent-color;
+		opacity: 1;
+	}
+	
+}
+
+.sm-offer{
+	padding: 7rem 0;
 }
