@@ -5,28 +5,6 @@
 		font-size: 2.85rem;
 	}
 }
-.nav {
-
-	// menu glowne
-	.top-bar{
-		background-color: #00FF4C;
-	}
-	.menu{
-		background-color: #00FF4C;
-		li a{
-			color: white;
-			&:hover{
-				color: black;
-			}
-		}
-	}
-
-	// menu mobilne
-	.title-bar{
-		background-color: #00FF4C;
-		text-align: center;
-	}
-}
 
 // STYLE NAGLOWKA
 .sm-top{
@@ -135,7 +113,7 @@
 // SLIDER
 .sm-slider{
 
-	@include sm-std-shadow;
+	//@include sm-std-shadow;
 	//background: url("../img/bg_1.jpg") no-repeat center center;
 	//background-size: cover; // skalowalnosc tla
 
@@ -165,7 +143,37 @@
 
 	}
 }
+p{
+	font-size: 1.2rem;
+}
 
+.sm-start{
+	padding: 7rem 0;
+	background-color: darken(white, 5%);
+	margin: 10px 0;
+	.round-icon{
+		font-size: 100px;
+		span{
+			padding: 0 10px;
+		}
+		
+		.fi-plus{
+			color: lighten(blue,15%);
+		}
+		.fi-torso-female{
+			color: violet;
+		}
+		.fi-torso{
+			color: orange;
+		}
+		.fi-torsos-all{
+			color: darken(yellow, 5%);
+		}
+		.fi-play{
+			color: $sm-accent-color;
+		}
+	}
+}
 
 .zmien{
 	
@@ -194,17 +202,36 @@
 		}
 	}
 }
-
+.parallax {
+	
+  height: 100%;
+  background: url("../img/para.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 // SEKCJA ZALETY
 .sm-highlights{
+	margin-top: -10px;
 	@include sm-std-shadow;
 	padding: 7rem 0;
-	
-	//tytuly 
+	//background: url("../img/zalety.jpg");
 	.sm-section-header{
-		color: $sm-secondary-text-color;
+		color: white;
+		h2{
+			@include przezroczyste;
+			font-weight: 400;
+
+		}
+		margin-bottom: 20px;
 	}
+
+	
 	
 	// pojedyncza kolumna
 	.sm-highlight{
@@ -256,3 +283,4 @@
 .sm-offer{
 	padding: 7rem 0;
 }
+
