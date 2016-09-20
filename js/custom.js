@@ -76,6 +76,7 @@ $(document).ready(function(){
 		$('#mobile-dropdown #'+sekcje[5]+'').click(function() { $.scrollTo($('.'+sekcje[5]+''), 1000); });
 
 		$('.scrollUp').click(function() { $.scrollTo($('.sm-body'), 1000); });
+		$('.orbit a').click(function() { $.scrollTo($('.sm-start'), 1000); });
     }
 
    zmiana();
