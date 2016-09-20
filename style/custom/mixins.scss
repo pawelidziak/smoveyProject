@@ -3,7 +3,12 @@
 }
 
 @mixin sm-std-shadow{
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+@mixin size($width,$height) {
+	width: $width;
+	height: $height;
 }
 
 @mixin slajd{
@@ -44,9 +49,9 @@
 	a{
 		margin-top: 15px;
 		background: transparent;
-		border: 1px solid $sm-accent-color;
+		border: 1px solid $sm-accent-color-2;
 		&:hover{
-			background-color: $sm-accent-color;
+			background-color: $sm-accent-color-2;
 			}
 	}
 
@@ -61,4 +66,10 @@
 	border-radius: $radius;
 	-moz-border-radius: $radius;
 	-webkit-border-radius: $radius;
+}
+
+//wyrownanie elemntu w pionie
+@mixin align-Y($px){
+	line-height: $px; 	
+	height: $px;
 }
