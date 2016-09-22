@@ -1,3 +1,36 @@
+// ################################################
+// #################
+// ################# ZMIANY GLOBALNE, KLASY
+// #################
+// ################################################
+
+// zmienne dla calego dokumentu
+body{
+	p{
+		font-size: 1.2rem;
+	}
+
+	@include breakpoint(small only){
+		h2{
+			font-size: 30px;
+		}
+
+		h3{
+			font-size: 30px;
+		}
+	}
+	
+}
+
+// tytuly sekcji
+.sm-section-header{
+	margin-bottom: 2.7rem;
+	h2{
+		font-size: 2.85rem;
+	}
+}
+
+// karta, np. w sm-start
 .card{
 	border-radius: 2px;
 	background: $sm-white;
@@ -7,27 +40,78 @@
 	&:hover{
 		box-shadow: 0 8px 17px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.20);
 	}
-
 	margin-bottom: 20px;
+	@include breakpoint(medium only){
+		min-height: 550px;
+	}	
+	
 }
 
-.card1{
-	border-radius: 2px;
-	background: $sm-white;
-	padding: 10px;
-	@include sm-std-shadow;
-	@include sm-transition;
-
+//tlo do slajdow
+.slajdTlo{
+	@include przezroczyste;
 }
 
-body{
-	@include breakpoint(small only){
-		h2{
-			font-size: 30px;
-		}
+//klasa zmieniajaca wielkosc topa (sticky)
+.changeTop{
+	
+	.sm-top{
+		background: darken(white, 0%);
+		position: fixed;
+		z-index: 9999;
+		width: 100%;
+		height: $sm-top-menu-h - 60px;
+		@include sm-std-shadow;
+	}
 
-		h3{
-			font-size: 30px;
+	.sm-logo{
+		@include align-Y($sm-top-menu-h - 60px);
+		span{
+			font-size: 50px;
 		}
+	}
+
+	.sm-desktop-menu{
+		li{
+			@include align-Y($sm-top-menu-h - 60px);
+			a{
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+//tlo parallax 
+.parallax {
+  background: url("../img/para.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// pokaz/odkryj
+.show{
+	display: block;
+}
+
+// scrollUp
+.scrollUp{
+	font-size: 50px;
+	color: $sm-accent-color;
+	opacity: 0.5;
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	display: none;
+	z-index: 9999;
+	
+	&:hover{
+		color: $sm-accent-color;
+		opacity: 1;
 	}
 }

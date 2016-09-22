@@ -1,21 +1,13 @@
 {
-  "name": "smovey",
+  "name": "test",
   "version": "1.0.0",
-  "description": "Projekt strony www",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pawelidziak/smoveyProject.git"
-  },
-  "author": "Pawel Idziak",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pawelidziak/smoveyProject/issues"
-  },
-  "homepage": "https://github.com/pawelidziak/smoveyProject#readme",
   "devDependencies": {
     "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",

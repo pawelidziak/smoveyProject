@@ -1,2 +1,0 @@
-# smoveyProject
-Projekt strony www

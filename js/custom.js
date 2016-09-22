@@ -5,24 +5,38 @@ $(document).ready(function(){
 		offset: 200
 	})
 	wow.init();
-
-	// DO ZMIANY TOPA
-	//odliczam odleglosc klasy od gory strony
+	
+// ################################################
+// #################
+// ################# ZMIENNE GLOBALNE
+// #################
+// ################################################
+	
+	// do zmiany topa - odliczam odleglosc klasy od gory strony
     var NavY = $('.sm-slider').offset().top;
     
+    // id sekcji w html
+    var sekcje = ["sm-body", "sm-highlights", "sm-offer", "sm-about", "sm-opinions", "sm-contact"];
+
+// ################################################
+// #################
+// ################# FUNKCJE
+// #################
+// ################################################    
+	
+	//funkcja do zmniejszenia topa
     var stickyNav = function(){
 	    var ScrollY = $(window).scrollTop();
-	             
+	    
+	    //gdy mine slider zmiejszam topa, czyli dodaje klase 'zmien'
 	    if (ScrollY > NavY) { 
-	        $('body').addClass('zmien');
+	        $('body').addClass('changeTop');
 	    } else {
-	        $('body').removeClass('zmien'); 
+	        $('body').removeClass('changeTop'); 
 	    }
     };
 
-    //id
-    	var sekcje = ["sm-body", "sm-highlights", "sm-offer", "sm-about", "sm-opinions", "sm-contact"];
-    	
+   	// funkcja zmienia kolory w menu gdy scrolujemy
     var zmiana = function(){
     	var whereIm = $(window).scrollTop();
 
@@ -49,17 +63,10 @@ $(document).ready(function(){
 	    
     }
 
+    // funkcja odpowiadajaca za przewijanie elementow na stronie
     var przewijanie = function(){
     	//reset scrola
 		$.scrollTo(0);
-
-		
-		// for(var i = 0; i < sekcje.length; i++){
-	 //   		$('.sm-desktop-menu #'+sekcje[i]+'').click(function() { $.scrollTo($('.'+sekcje[i]+''), 1000); });	
-	 //   		//console.log('#'+sekcje[i]+'    .'+sekcje[i]+'');
-		// }
-		
-		//$('.sm-desktop-menu #sm-highlights').click(function() { $.scrollTo($('.sm-highlights'), 1000); });
 
 		$('.sm-desktop-menu #'+sekcje[0]+'').click(function() { $.scrollTo($('.'+sekcje[0]+''), 1000); });	
 		$('.sm-desktop-menu #'+sekcje[1]+'').click(function() { $.scrollTo($('.'+sekcje[1]+''), 1000); });	
@@ -79,10 +86,14 @@ $(document).ready(function(){
 		$('.orbit a').click(function() { $.scrollTo($('.sm-start'), 1000); });
     }
 
-   zmiana();
-   stickyNav();
-   przewijanie();
 
+
+    // wywolanie funkcji
+   	zmiana();
+   	stickyNav();
+   	przewijanie();
+
+   	// funkcje operujace na scrollu trzeba wywolac ponownie
     $(window).scroll(function() {
         stickyNav();
         zmiana();

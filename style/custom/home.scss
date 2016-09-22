@@ -1,12 +1,10 @@
+// ################################################
+// #################
+// ################# STYLE NAGLOWKA
+// #################
+// ################################################
 
-.sk-section-header{
-	margin-bottom: 2.7rem;
-	h2{
-		font-size: 2.85rem;
-	}
-}
-
-// STYLE NAGLOWKA
+// pozycja jako sticky
 .sm-top{
 	background: darken(white, 0%);
 	position: fixed;
@@ -21,16 +19,15 @@
 	//odstep wewnetrznego elementu
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
+	
 	//menu mobilne
 	.title-bar{
 		color: $sm-accent-color;
 		background-color: transparent;
-		//te trzy linijki odpowiadaja za pozycjonowanie w pionie
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		@include poisitonFromTop(50%);
 		font-size: 30px;
 	}
+	//menu mobilne - lista
 	#mobile-dropdown{
 		@include sm-std-shadow;
 		background-color: $sm-white;
@@ -39,30 +36,29 @@
 		}
 		a{
 			color: $sm-primary-text-color;
-
 			&:hover{
 				color: $sm-accent-color;
 			}
 		}
 	}
 
-	// menu desktop
+	//menu desktop
 	.sm-desktop-menu{
 		// elementy w menu
 		li{
-
+			@include align-Y($sm-top-menu-h);
+			
 			.activePage{
 				@include border-radius-single(10%);
-					background-color: lighten($sm-accent-color, 10%);
-					font-weight: 400;
-					color: darken(white, 70%);
+				background-color: lighten($sm-accent-color, 10%);
+				font-weight: 400;
+				color: darken(white, 70%);
+				
 				&:hover{
 					color: darken(white, 70%);
 				}
 			}
-
-			line-height: $sm-top-menu-h; 	// pozycjonowanie listy menu w pionie
-			height: $sm-top-menu-h;			// listy menu w pionie
+			
 			a{	
 				font-size: 20px;
 				color: black;
@@ -85,6 +81,7 @@
 	// logo
 	.sm-logo{
 		float: left;
+		
 		//dla najmniejszych urzadzen wyswietlam ikone po prawej str topa
 		@include breakpoint(small only){
 			position: absolute;
@@ -103,60 +100,63 @@
 	}
 }
 
+// ################################################
+// #################
+// ################# GORNY SEPARATOR
+// #################
+// ################################################
 
-// GORNY SEPARATOR
 .sm-top-separator{
 	display: block;
 	height: $sm-top-menu-h;
 }
 
-// SLIDER
+// ################################################
+// #################
+// ################# SLIDER
+// #################
+// ################################################
+
 .sm-slider{
-
-	//@include sm-std-shadow;
-	//background: url("../img/bg_1.jpg") no-repeat center center;
-	//background-size: cover; // skalowalnosc tla
-
+	
+	//slider orbit
 	.orbit{
-	background: url("../img/slide.jpg") no-repeat center center;
-	// background-size: 100%;
-		//kazdy slajd
+		background: url("../img/slide.jpg") no-repeat center -150px;
+		background-size: 100%;
+		margin-bottom: -10px;
 		
+		//pojedynczy slajd 
 		.orbit-slide{
 			@include slajd;
 		}
 		
-		// przyciski pod slajdami
+		//przyciski pod slajdami
 		.orbit-bullets{
-			position: absolute;
 			bottom: 10px;
-			left: 50%;
-			transform: translateX(-50%);
+			@include poisitonFromLeft(50%);
 			.is-active{
 				background-color: $sm-accent-color-2;
 			}
-
-			button:hover{
-				//background-color: #CACACA;
-			}
 		}
-
 	}
 }
-p{
-	font-size: 1.2rem;
-}
+
+// ################################################
+// #################
+// ################# SEKCJA START, POD SLIDEREM
+// #################
+// ################################################
 
 .sm-start{
 	padding: 7rem 0;
 	background-color: darken(white, 5%);
 	margin: 10px 0;
+
+	//ikony
 	.round-icon{
 		font-size: 100px;
-		span{
-			padding: 0 10px;
-		}
 		
+		// kolory poszczegonych ikon
 		.fi-plus{
 			color: lighten(blue,15%);
 		}
@@ -175,112 +175,82 @@ p{
 	}
 }
 
-.zmien{
-	
-	.sm-top{
-		background: darken(white, 0%);
-		position: fixed;
-		z-index: 9999;
-		width: 100%;
-		height: $sm-top-menu-h - 60px;
-		@include sm-std-shadow;
-	}
+// ################################################
+// #################
+// ################# SEKCJA ZALETY
+// #################
+// ################################################
 
-	.sm-logo{
-		@include align-Y($sm-top-menu-h - 60px);
-		span{
-			font-size: 50px;
-		}
-	}
-
-	.sm-desktop-menu{
-		li{
-			@include align-Y($sm-top-menu-h - 60px);
-			a{
-				font-size: 16px;
-			}
-		}
-	}
-}
-.parallax {
-	
-  height: 100%;
-  background: url("../img/para.jpg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-// SEKCJA ZALETY
 .sm-highlights{
 	margin-top: -10px;
 	@include sm-std-shadow;
 	padding: 7rem 0;
-	//background: url("../img/zalety.jpg");
+
+	// tytul
 	.sm-section-header{
 		color: white;
-		h2{
-			@include przezroczyste;
-			font-weight: 400;
+		@include przezroczyste;
+		border-radius: 10px;
+	}
+	
+	#zaleta1, #zaleta2, #zaleta3, #zaleta4, #zaleta5, #zaleta6, #zaleta7, #zaleta8{
 
-		}
-		margin-bottom: 20px;
 	}
 
-	
-	
-	// pojedyncza kolumna
-	.sm-highlight{
-		margin-bottom: 25px;
-		p{
-			color: $sm-87p-black;
+	.sm-content{
+		//@include przezroczyste;
+		display: none;
+		min-height: 240px;
+		border-radius: 20px;
+		span{
+			font-size: 40px;
+			color: orange;
+			background-color: darken(white, 10%);
+			@include border-radius-single(50%);
+			padding: 10px 20px;
+			//border: 3px solid $sm-accent-color;
 		}
-		h4{
-			font-size: 1.56rem;
+		p{
+			margin-top: 10px;
+			font-size: 20px;
+		}
+
+		.inner{
+			padding: 20px;
+			background-color: rgba(255,255,255,0.3);
+			min-height: 220px;
+			border-radius: 20px;
+		}
+	}
+	
+	//grupa
+	.button-group{
+		.activeButton{
+			background-color: $sm-accent-color;
+			font-size: 25px;
 		}
 		
-		//ikona
-		.round-icon{
-			font-size: 4rem;
-			margin: 1.7rem 0 1rem;
-			color: $sm-accent-color-2;
-			
-
-			span{
-				&:hover{
-					color: $sm-accent-color;		
-				}
+		.button{
+			&:hover{
+				background-color: $sm-accent-color;
+				font-size: 25px;
 			}
 		}
 	}
-
-}
-
-
-
-// scrollUp
-.scrollUp{
-	font-size: 50px;
-	color: $sm-accent-color;
-	opacity: 0.5;
-	position: fixed;
-	right: 20px;
-	bottom: 10px;
-	display: none;
-	z-index: 9999;
-	
-	&:hover{
-		color: $sm-accent-color;
-		opacity: 1;
-	}
 	
 }
+
+
+// ################################################
+// #################
+// ################# SEKCJA OFERTA
+// #################
+// ################################################
 
 .sm-offer{
 	padding: 7rem 0;
 }
+
+
+
 
