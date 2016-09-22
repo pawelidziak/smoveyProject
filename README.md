@@ -1,0 +1,2 @@
+# smoveyProject
+Projekt strony www
