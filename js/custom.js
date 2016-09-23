@@ -41,8 +41,8 @@ $(document).ready(function(){
     	var whereIm = $(window).scrollTop();
 
     	var Start = $('.sm-body').offset().top - 100;
-    	var Zalety = $('.sm-highlights').offset().top - 100;
-    	var Oferta = $('.sm-offer').offset().top - 100;
+    	var Zalety = $('.sm-highlights').offset().top - 101;
+    	var Oferta = $('.sm-offer').offset().top - 101;
     	var Omnie = $('.sm-about').offset().top - 100;
     	var Opinie = $('.sm-opinions').offset().top - 100;
     	var Kontakt = $('.sm-contact').offset().top - 100;
@@ -104,11 +104,12 @@ $(document).ready(function(){
     });
 
 
-
-
-
+/* Slider opinie */
+	$('#opinions-slider').bxSlider({
+		mode: 'vertical',
+		auto: true,
+		controls: false
+	});
 
 });
 
-
-//funkcja odpowiadajaca za przewijanie poszczegolnych elementow

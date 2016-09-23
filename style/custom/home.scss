@@ -124,10 +124,11 @@
 		background: url("../img/slide.jpg") no-repeat center -150px;
 		background-size: 100%;
 		margin-bottom: -10px;
-		
+		color: white;
 		//pojedynczy slajd 
 		.orbit-slide{
 			@include slajd;
+
 		}
 		
 		//przyciski pod slajdami
@@ -157,7 +158,7 @@
 		font-size: 100px;
 		
 		// kolory poszczegonych ikon
-		.fi-plus{
+		.fi-info{
 			color: lighten(blue,15%);
 		}
 		.fi-torso-female{
@@ -185,59 +186,35 @@
 	margin-top: -10px;
 	@include sm-std-shadow;
 	padding: 7rem 0;
+	
 
 	// tytul
 	.sm-section-header{
-		color: white;
-		@include przezroczyste;
-		border-radius: 10px;
-	}
-	
-	#zaleta1, #zaleta2, #zaleta3, #zaleta4, #zaleta5, #zaleta6, #zaleta7, #zaleta8{
-
-	}
-
-	.sm-content{
 		//@include przezroczyste;
-		display: none;
-		min-height: 240px;
-		border-radius: 20px;
-		span{
-			font-size: 40px;
-			color: orange;
-			background-color: darken(white, 10%);
-			@include border-radius-single(50%);
-			padding: 10px 20px;
-			//border: 3px solid $sm-accent-color;
-		}
-		p{
-			margin-top: 10px;
-			font-size: 20px;
+		border-radius: 10px;
+		text-transform: uppercase;
+	}
+	
+	.sm-highlight{
+		margin-bottom: 20px;
+		background: $sm-white;
+		padding: 10px 30px;
+		border-radius: 5px;
+		@include sm-std-shadow;
+		@include sm-transition;
+		&:hover{
+			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.20);
+		}	
+		@include breakpoint(medium){
+			min-height: 230px;
 		}
 
-		.inner{
-			padding: 20px;
-			background-color: rgba(255,255,255,0.3);
-			min-height: 220px;
-			border-radius: 20px;
+		.icon{
+			padding: 10px;
+			font-size: 50px;
+			color: $sm-accent-color;
 		}
 	}
-	
-	//grupa
-	.button-group{
-		.activeButton{
-			background-color: $sm-accent-color;
-			font-size: 25px;
-		}
-		
-		.button{
-			&:hover{
-				background-color: $sm-accent-color;
-				font-size: 25px;
-			}
-		}
-	}
-	
 }
 
 
@@ -249,8 +226,109 @@
 
 .sm-offer{
 	padding: 7rem 0;
+	
+	#sm-vert-tabs{
+		li{
+			a{
+				color: black;
+			}
+		}
+	}
+
+	.tabs-content{
+		border:1px solid $light-gray;
+	}
 }
 
+// ################################################
+// #################
+// ################# SEKCJA O MNIE
+// #################
+// ################################################
 
+.sm-about{
+	padding: 7rem 0;
+	background-color: darken(white, 70%);
+}
 
+// ################################################
+// #################
+// ################# SEKCJA OPINIE
+// #################
+// ################################################
 
+.sm-opinions{
+	padding: 7rem;
+	.opinions-content{
+		border-radius: 10px;
+		border: 1px solid lighten(black, 50%);
+		padding: 2rem 2rem 0 2rem;
+		
+		li{
+			padding-right: 20px;
+			margin-left: -20px;
+		}
+	}
+}
+
+// ################################################
+// #################
+// ################# SEKCJA KONTAKT
+// #################
+// ################################################
+
+.sm-contact{
+	padding: 7rem 0 3rem 0;
+	background-color: #303030;
+	h2{
+		text-transform: uppercase;
+		color: #ffa64d;
+		margin-top: 30px;
+	}
+	h3{
+		color: #ffa64d;
+		margin-top: 30px;
+	}
+	p{
+		margin-bottom: 0;
+		line-height: 22px;
+		span{
+			color: white;
+		}
+	}
+}
+.sm-social{
+	background-color: darken(#303030, 5%);
+	.icon{
+
+		font-size: 200px;
+
+		.fi-social-facebook{	
+			color: #4668b3; 
+			&:hover{
+				color: darken(#4668b3,10%);
+			}
+		}
+		.fi-social-youtube{
+			color: #d94348;
+			&:hover{
+				color: darken(#d94348,10%);
+			} 
+		}
+		@include breakpoint(medium){
+			padding: 2rem 0;
+		}
+
+	}
+}
+
+.sm-footer{
+	background-color: darken(#303030, 10%);
+	padding: 2rem 0;
+	p{
+		margin-bottom: 0;
+	}
+	span{
+		color: $sm-basic-text-color;
+	}
+}

@@ -21,7 +21,6 @@
 
 // mixin dla kazdego ze slajdow w slajderze
 @mixin slajd{
-	color: $sm-white;
 			
 	// pading dla malych urzadzen
 	padding: 5rem 0;
@@ -32,8 +31,10 @@
 	}
 	
 	h1{
-		font-size: 3.25rem;
+		color: darken(white, 10%);
+		font-size: 2.5rem;
 		text-transform: uppercase;
+
 		@include breakpoint(large){
 			font-size: 6rem;
 			line-height: 7rem;

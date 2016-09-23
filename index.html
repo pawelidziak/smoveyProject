@@ -4,14 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Active time</title>
+
+    <!-- SKOMPILOWANY CSS -->
     <link rel="stylesheet" href="style/main.css" />
-      <link rel="stylesheet" href="css/motion-ui.min.css" />
+    
+    <!-- motion us -->
+    <link rel="stylesheet" href="css/motion-ui.min.css" />
+
     <!-- Ikony -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     
+    <!-- Fonty Google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <!-- bxSlider CSS file -->
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+
   </head>
-<body class="sm-body">
+<body class="sm-body" id="cos">
 
 <a href="#" class="scrollUp"><span class="fi-arrow-up"></span></a>
 
@@ -121,17 +136,17 @@
 <section class="sm-start">
   <div class="row">
         
-    <div class="medium-6 columns sm-highlight text-center">
+    <div class="medium-6 columns text-center">
       <div class="card">
         <div class="round-icon">
-          <span class="fi-plus"></span>
+          <span class="fi-info"></span>
         </div>
         <h2>Co to jest Smovey?</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores mollitia magnam quae odit atque expedita laborum quidem culpa. Doloribus, reprehenderit.</p>
       </div>
     </div>
         
-    <div class="medium-6 columns sm-highlight text-center">
+    <div class="medium-6 columns text-center">
       <div class="card">
         <div class="round-icon">
           <span class="fi-torso-female"></span>
@@ -143,7 +158,7 @@
       </div> 
     </div>
 
-    <div class=" columns sm-highlight">
+    <div class="columns">
       <div class="card">
         <div class="round-icon text-center">
           <span class="fi-play"></span>
@@ -159,151 +174,217 @@
 <!-- SEKCJA ZALETY --> 
 <section class="sm-highlights parallax">
   
-  <div class="small-12 columns sm-section-header text-center row wow zoomIn">
-    <h2>Zalety</h2>
-    <p>Kliknij na jeden z przycisków poniżej i dowiedz się wiecej!</p>
+  <div class="row">
+    
+
+
+    <div class="medium-6 large-4 columns wow zoomIn">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-graph-bar"></span>
+        </div>
+        <div class="content">
+          <p><b>Aktywuje</b> 97% mięśni = <b>spalanie tkanki tłuszczowej.</b></p>
+        </div>
+          
+      </div>
+    </div>
+
+    <div class="medium-6 large-4 columns wow zoomIn">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-clock"></span>
+        </div>
+        <div class="content">
+          <p><b>Witalizuje</b> ponad 100 milionów <b>komóek ciała</b>.</p>
+        </div> 
+      </div>
+    </div>
+
+    <div class="medium-6 large-4 columns wow zoomIn">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-plus"></span>
+        </div>
+          <p><b>Uelastycznia</b> tkankę łączną.</p>
+      </div>
+    </div>
+
+    <div class="medium-6 columns wow bounceInLeft">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-star"></span>
+        </div>
+          <p><b>Mobilizuje</b> układ trawienny.</p>
+      </div>
+    </div>
+
+    <div class="medium-6 columns wow bounceInRight">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-heart"></span>
+        </div>
+          <p><b>Stymuluje</b> przemianę materii.</p>
+      </div>
+    </div>
+
+    <div class="medium-6 large-4 columns wow zoomIn">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-like"></span>
+        </div>
+          <p><b>Masuje</b> i odciąża <b>układ limfatyczny</b> = detoksyzacja.</p>
+      </div>
+    </div> 
+    
+    <div class="medium-6 large-4 columns wow zoomIn">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-refresh"></span>
+        </div>
+          <p><b>Wspomaga układ odpornościowy</b> i funkcjonowanie <b>grasicy</b>.</p>
+      </div>
+    </div> 
+
+    <div class="medium-6 large-4 columns wow zoomIn">
+      <div class="sm-highlight text-center">
+        <div class="icon">
+          <span class="fi-checkbox"></span>
+        </div>
+          <p><b>Wzmacnia</b> układ sercowo-naczyniowy.</p>
+      </div>
+    </div> 
+
+
   </div>
  
-  <div class="row">
-    <div class="small-12 columns sm-highlight text-center">
-      <div class="button-group large">
-        <button class="button" data-toggle="active1 zaleta1" id="active1" data-toggler=".activeButton">1</button>
-        <button class="button" data-toggle="active2 zaleta2" id="active2" data-toggler=".activeButton">2</button>
-        <button class="button" data-toggle="active3 zaleta3" id="active3" data-toggler=".activeButton">3</button>
-        <button class="button" data-toggle="active4 zaleta4" id="active4" data-toggler=".activeButton">4</button>
-        <button class="button" data-toggle="active5 zaleta5" id="active5" data-toggler=".activeButton">5</button>
-        <button class="button" data-toggle="active6 zaleta6" id="active6" data-toggler=".activeButton">6</button>
-        <button class="button" data-toggle="active7 zaleta7" id="active7" data-toggler=".activeButton">7</button>
-        <button class="button" data-toggle="active8 zaleta8" id="active8" data-toggler=".activeButton">8</button>
-      </div>
-    </div>
-  </div> 
-
-<!--   <div class="row">
-    <div class="small-12 columns sm-highlight text-center">
-      <button class="button" data-toggle="zaleta1 zaleta2 zaleta3 zaleta4 zaleta5 zaleta6 zaleta7 zaleta8">Pokaż/ukryj</button>
-    </div>
-  </div>  --> 
-
-  <div class="row">
-
-    <div class="medium-6 columns sm-content text-center" id="zaleta1" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>1</span>
-        <p><b>Aktywuje</b> 97% mięśni = <b>spalanie tkanki tłuszczowej.</b></p>
-      </div>
-      
-
-    </div>
-    <div class="medium-6 columns sm-content text-center" id="zaleta2" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>2</span>
-        <p><b>Witalizuje</b> ponad 100 milionów <b>komóek ciała</b>.</p> 
-      </div>
-      
-    </div> 
-    <div class="medium-6 columns sm-content text-center" id="zaleta3" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>3</span>
-        <p><b>Uelastycznia</b> tkankę łączną.</p>
-      </div>
-    </div>
-    <div class="medium-6 columns sm-content text-center" id="zaleta4" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>4</span>
-        <p><b>Mobilizuje</b> układ trawienny.</p>
-      </div>
-    </div>
-    <div class="medium-6 columns sm-content text-center" id="zaleta5" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>5</span>
-        <p><b>Stymuluje</b> przemianę materii.</p>
-      </div>
-    </div>
-    <div class="medium-6 columns sm-content text-center" id="zaleta6" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>6</span>
-        <p><b>Masuje</b> i odciąża <b>układ limfatyczny</b> = detoksyzacja.</p>
-      </div> 
-    </div>
-    <div class="medium-6 columns sm-content text-center" id="zaleta7" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>7</span>
-        <p><b>Wspomaga układ odpornościowy</b> i funkcjonowanie <b>grasicy</b>.</p>
-      </div>
-    </div>
-    <div class="medium-6 columns sm-content text-center" id="zaleta8" data-toggler data-animate="hinge-in-from-top spin-out">
-      <div class="inner">
-        <span>8</span>
-        <p><b>Wzmacnia</b> układ sercowo-naczyniowy.</p>
-      </div>
-    </div>
-  
-  </div>
 
 </section>
 
 <section class="sm-offer">
-sm-offer
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-koniec sm-offer
+<div class="row collapse">
+
+  <div class="sm-section-header text-center">
+    <h2>Co oferuje?</h2>
+  </div>
+
+  <div class="medium-3 columns">
+    <ul class="tabs vertical" id="sm-vert-tabs" data-tabs>
+      <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Trening ze Smovey</a></li>
+      <li class="tabs-title"><a href="#panel2v">Masaż</a></li>
+      <li class="tabs-title"><a href="#panel3v">Kupno Smovey</a></li>
+    </ul>
+    </div>
+    <div class="medium-9 columns">
+    <div class="tabs-content vertical" data-tabs-content="sm-vert-tabs">
+      <div class="tabs-panel is-active" id="panel1v">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident non harum, quia unde quo assumenda minus autem numquam tempora mollitia aliquid, cum dicta nemo ea hic dolorum! Quidem impedit hic, cum ut nisi ad suscipit fuga corporis! Nam odit voluptatem ipsam cum molestias facilis, similique, recusandae asperiores est, repudiandae sint natus vitae odio qui, perferendis. Adipisci unde itaque veniam illum vitae suscipit ullam atque quaerat, repellat aspernatur accusamus sunt hic placeat, sequi, velit fugit fuga quod deleniti quibusdam explicabo laudantium cumque non earum. Sit odit repellat quidem itaque omnis cum nobis voluptatem laborum fugit. Corporis inventore dolorum tempore quaerat perspiciatis!</p>
+      </div>
+      <div class="tabs-panel" id="panel2v">
+        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+      </div>
+      <div class="tabs-panel" id="panel3v">
+        <!-- <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg"> -->
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 
 <section class="sm-about">
 sm-about
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+s
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
 koniec sm-about
 </section>
 
 <section class="sm-opinions">
-sm-opinions
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-koniec sm-opinions
+  <div class="row">
+      
+    <!-- tytuł -->
+    <div class="sm-section-header text-center">
+      <h2>Dlaczego warto?</h2>
+      <p>Niektórzy już zmienili swoje życie na lepsze!</p>
+    </div>
+        
+        <!-- opinie -->
+    <div class="opinions-content text-center">
+      <ul class="bxslider" id="opinions-slider">
+        <li>
+          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae. Donec alit urna scelerisque ac."</i></p>
+          <h4>Tadeusz Pierwszy</h4>
+        </li>
+        <li>
+          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae. Donec alit urna scelerisque ac."</i></p>
+          <h4>Tadeusz Drugi</h4>
+        </li>
+        <li>
+          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae; Donec alit urna scelerisque ac."</i></p>
+          <h4>Tadeusz Trzeci</h4>
+        </li>
+        <li>
+          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae. Donec alit urna scelerisque ac."</i></p>
+          <h4>Tadeusz Czwarty</h4>
+        </li>
+      </ul>
+    </div>
+      
+</div>
 </section>
 
-<section class="sm-contact" id="Kontakt">
-sm-contact
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-koniec sm-contact
+<section class="sm-contact">
+  <div class="row">
+
+    <div class="medium-6 columns text-left">
+      <h2>Active Time</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ipsam soluta in, delectus laborum ratione distinctio expedita quo tempore! Eligendi culpa quos tenetur, possimus nam dolorum, deserunt laborum, doloribus id enim laudantium sunt accusamus natus alias provident, vel. Ratione, ex.</p>
+    </div>
+    <div class="medium-6 columns text-right">
+      <h3>Nie czekaj i skontaktuj się już dziś!</h3>
+      <p>Tel: <span><i>605 656 404</i></span></p>
+      <p>E-mail: <span><i>cos_tam@gmail.com</i></span></p>
+    </div>
+  </div>
+  
 </section>
 
-<section class="sm-footer">
-sm-footer
-<br><br><br><br><br><br><br>
-koniec sm-footer
+<section class="sm-social">
+    <div class="row">
+    <div class="medium-6 columns text-center">
+      <div class="icon">
+        <a href="http://facebook.com" target="_blank" class="fi-social-facebook"><i class="icon-youtube"></i></a>
+      </div>
+    </div>
+     
+    <div class="medium-6 columns text-center">
+      <div class="icon">
+        <a href="http://youtube.com" target="_blank" class="fi-social-youtube"><i class="icon-youtube"></i></a>
+      </div>
+    </div>
+</div>
+  
 </section>
+
+<footer class="sm-footer">
+  <div class="row text-center">
+      <p>Copyright Paweł Idziak &copy; 2016</p>
+      <span>pa.idziak@gmail.com</span>
+  </div>
+</footer>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/wow.min.js"></script>
+
     <!-- Scroll To -->
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/custom.js"></script>
+        <!-- Ladowanie obrazkow -->
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+        <!-- bxSlider Javascript file -->
+    <script src="js/jquery.bxslider.min.js"></script>
   </body>
 </html>

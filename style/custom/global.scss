@@ -6,8 +6,14 @@
 
 // zmienne dla calego dokumentu
 body{
+	font-family: $sm-font-family-primary;
 	p{
 		font-size: 1.2rem;
+		color: $sm-basic-text-color;
+	}
+	
+	h1,h2,h3,h4{
+		color: $sm-basic-header-color;
 	}
 
 	@include breakpoint(small only){
@@ -19,6 +25,7 @@ body{
 			font-size: 30px;
 		}
 	}
+	
 	
 }
 
@@ -34,7 +41,8 @@ body{
 .card{
 	border-radius: 2px;
 	background: $sm-white;
-	padding: 10px;
+	padding: 10px 30px;
+	padding-bottom: 50px;
 	@include sm-std-shadow;
 	@include sm-transition;
 	&:hover{
@@ -43,8 +51,8 @@ body{
 	margin-bottom: 20px;
 	@include breakpoint(medium only){
 		min-height: 550px;
-	}	
-	
+	}
+
 }
 
 //tlo do slajdow
@@ -83,7 +91,7 @@ body{
 
 //tlo parallax 
 .parallax {
-  background: url("../img/para.jpg");
+  background: url("../img/para.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
