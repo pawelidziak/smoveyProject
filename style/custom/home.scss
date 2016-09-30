@@ -15,7 +15,7 @@
 }
 
 // naglowek
-.top-bar{
+.top-bar{ 
 	//odstep wewnetrznego elementu
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
@@ -149,10 +149,16 @@
 // ################################################
 
 .sm-start{
-	padding: 7rem 0;
+	padding: 5rem 0;
 	background-color: darken(white, 5%);
 	margin: 10px 0;
-
+	
+	.card{
+		min-height: 545px;
+		@include breakpoint(medium only){
+			min-height: 610px;
+		}
+	}
 	//ikony
 	.round-icon{
 		font-size: 100px;
@@ -196,15 +202,8 @@
 	}
 	
 	.sm-highlight{
-		margin-bottom: 20px;
-		background: $sm-white;
-		padding: 10px 30px;
-		border-radius: 5px;
-		@include sm-std-shadow;
-		@include sm-transition;
-		&:hover{
-			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.20);
-		}	
+		@include card-mixin;
+		
 		@include breakpoint(medium){
 			min-height: 230px;
 		}
@@ -214,7 +213,51 @@
 			font-size: 50px;
 			color: $sm-accent-color;
 		}
+		h3{
+			padding: 20px 0;
+		}
+
+		.more{
+			color: $sm-accent-color-2;
+			@include breakpoint(small only){
+				float: none;
+			}
+			@include breakpoint(medium only){
+				float: none;
+			}
+			span{
+				color: $sm-basic-text-color;
+			}
+			
+		}
+		a{
+
+			margin-top: -30px;
+		}
+		.fi-social-youtube{
+
+			font-size: 100px;
+			color: #d94348;
+			&:hover{
+				color: darken(#d94348,10%);
+			} 
+		} 
+
+		.fi-web{
+			font-size: 100px;
+			color: #4668b3; 
+			&:hover{
+				color: darken(#4668b3,10%);
+			}
+		}
+
+		
 	}
+
+
+
+	
+
 }
 
 
@@ -237,6 +280,21 @@
 
 	.tabs-content{
 		border:1px solid $light-gray;
+		img{
+			margin-bottom: 40px;
+			border-radius: 10px;
+		}
+		span{
+			color: $sm-accent-color-2;
+			font-weight: 400;
+		}
+		#sign{
+			border-radius: 10px;
+			background-color: $sm-accent-color-2;
+			&:hover{
+				background-color: darken($sm-accent-color-2, 10%);
+			}
+		}
 	}
 }
 
@@ -248,7 +306,11 @@
 
 .sm-about{
 	padding: 7rem 0;
-	background-color: darken(white, 70%);
+	background-color: darken(white, 50%);
+
+	h2{
+		color: $sm-accent-color-2;
+	}
 }
 
 // ################################################
@@ -268,7 +330,20 @@
 			padding-right: 20px;
 			margin-left: -20px;
 		}
+
+		@include breakpoint(small only){
+			display: none;
+		}
 	}
+	.opinions-content-alert{
+		p{
+			padding: 10px 20px 0 0;
+		}
+		@include breakpoint(medium){
+			display: none;
+		}
+	}
+
 }
 
 // ################################################
@@ -278,7 +353,7 @@
 // ################################################
 
 .sm-contact{
-	padding: 7rem 0 3rem 0;
+	padding: 7rem 0 7rem 0;
 	background-color: #303030;
 	h2{
 		text-transform: uppercase;
@@ -289,13 +364,32 @@
 		color: #ffa64d;
 		margin-top: 30px;
 	}
-	p{
-		margin-bottom: 0;
-		line-height: 22px;
-		span{
-			color: white;
+
+	.icon{
+
+		margin-top: 10px;
+
+		
+		p{
+			min-height: 100px;
+			
+			padding: 10px;
+			line-height: 22px;
+			padding-top: 22px;
+			border-radius: 5px;
+			span{
+				color: white;
+
+			}
+
+			@include breakpoint(small only){
+				float: right;
+			}
 		}
+
 	}
+
+	
 }
 .sm-social{
 	background-color: darken(#303030, 5%);
@@ -331,4 +425,70 @@
 	span{
 		color: $sm-basic-text-color;
 	}
+}
+
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px 25px;
+ 	margin-top: 20px;
+ 	background-color: white;
+
+  img{
+  	border-radius: 50%;
+  	height: 100px;
+  }
+  p{
+  	font-size: 16px;
+  }
+  h4{
+  	color: $sm-accent-color;
+  }
+}
+
+.box-icon {
+  border-radius: 50%;
+  display: table;
+  height: 100px;
+  margin: 0 auto;
+  width: 100px;
+  margin-top: -61px;
+  font-size: 3rem;
+
+}
+
+.info {
+  h4 {
+  	padding-top: 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $sm-accent-color;
+  }
+  p {
+    color: #717171;
+    font-size: 15px;
+    padding-top: 10px;
+
+  }
+
+
+  #certyfikat{
+  	background-color: $sm-accent-color;
+  	border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease 0s;
+    
+  	&:hover {
+  		background-color: $sm-dark-primary-color;
+    	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    	transition: all 0.5s ease 0s;
+    }
+  }
+
+  span{
+  	margin-top: -20px;
+  }
+
 }

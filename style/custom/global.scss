@@ -39,18 +39,13 @@ body{
 
 // karta, np. w sm-start
 .card{
-	border-radius: 2px;
-	background: $sm-white;
-	padding: 10px 30px;
-	padding-bottom: 50px;
-	@include sm-std-shadow;
-	@include sm-transition;
-	&:hover{
-		box-shadow: 0 8px 17px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.20);
-	}
-	margin-bottom: 20px;
+	@include card-mixin;
+	
 	@include breakpoint(medium only){
-		min-height: 550px;
+		
+		p{
+			font-size: 15px;
+		}
 	}
 
 }
@@ -122,4 +117,22 @@ body{
 		color: $sm-accent-color;
 		opacity: 1;
 	}
+}
+
+
+.hide-animate {
+	opacity: 0;
+}
+
+.show-animate{
+	opacity: 1;
+}
+
+.s{
+	float: left;
+			display: block;
+			color: $sm-accent-color-2;
+			@include breakpoint(small only){
+				float: none;
+			}
 }

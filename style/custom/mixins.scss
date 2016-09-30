@@ -55,9 +55,16 @@
 		font-weight: 400;
 		background: transparent;
 		border: 2px solid $sm-accent-color-2;
+		border-radius: 7px;
 		&:hover{
 			background-color: $sm-accent-color-2;
-			}
+		}
+
+		i{
+			padding-left: 15px;
+			color: white;
+		}
+		-webkit-animation-iteration-count: infinite;
 	}
 }
 
@@ -85,6 +92,10 @@
 	left: $left;
 	transform: translateX(-50%);
 }
+
+
+
+
 /* .icon-left{
 	@include breakpoint(small only){
 		text-align: center;
@@ -104,3 +115,17 @@
 		text-align: right;
 	}	
 } */
+
+
+// potrzebne do karty
+@mixin card-mixin{
+	border-radius: 2px;
+	background: $sm-white;
+	padding: 10px 30px;
+	@include sm-std-shadow;
+	@include sm-transition;
+	&:hover{
+		box-shadow: 0 8px 17px 0 rgba(0,0,0,0.20), 0 6px 20px 0 rgba(0,0,0,0.20);
+	}
+	margin-bottom: 20px;
+}

@@ -8,14 +8,15 @@
 
     <!-- SKOMPILOWANY CSS -->
     <link rel="stylesheet" href="style/main.css" />
-    
+     
     <!-- motion us -->
     <link rel="stylesheet" href="css/motion-ui.min.css" />
 
+    
     <!-- Ikony -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     
-    <!-- Fonty Google -->
+    <!-- Fonty Google --> 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     
@@ -77,7 +78,7 @@
 <div class="sm-top-separator"></div>
 
 <!-- SLIDER -->
-<section class="sm-slider ">
+<section class="sm-slider">
   <div class="orbit" role="region" data-orbit>
     <ul class="orbit-container">
       
@@ -88,9 +89,10 @@
           <div class="medium-12 columns slajdTlo text-center">        <!-- po lewej stronie zajmujemy 8kolumn -->
             <h1>Responsive</h1>
             <p>Mobilne oraz desktop</p>
-            <a href="#" class="large button">Dowiedz się więcej!</a>
+            <a href="#" class="large button animated pulse">Dowiedz się więcej!<i class="fi-arrow-down"></i></a>
           </div>
-        </div>
+          </div>
+
       </li>
 
       <!-- Jeden slajd -->
@@ -99,7 +101,7 @@
           <div class="medium-8 columns slajdTlo">
             <h1>Foundation</h1>
             <p>Mobilne oraz desktop</p>
-            <a href="#" class="large button">Dowiedz się więcej!</a>
+            <a href="#" class="large button animated pulse">Dowiedz się więcej!<i class="fi-arrow-down"></i></a>
           </div>
           <div class="medium-4 columns show-for-medium">
             <img src="http://placehold.it/450x394" alt="Slajd 2" class="text-center">
@@ -113,7 +115,7 @@
           <div class="medium-8 columns slajdTlo">
             <h1>Style SASS</h1>
             <p>Mobilne oraz desktop</p>
-            <a href="#" class="large button">Dowiedz się więcej!</a>
+            <a href="#" class="large button animated pulse">Dowiedz się więcej!<i class="fi-arrow-down"></i></a>
           </div>
           <div class="medium-4 columns show-for-medium">
             <img src="img/slide_3.png" alt="Slajd 3" class="text-center">
@@ -136,35 +138,48 @@
 <section class="sm-start">
   <div class="row">
         
-    <div class="medium-6 columns text-center">
+    <div class="medium-6 columns text-center" >
       <div class="card">
         <div class="round-icon">
           <span class="fi-info"></span>
         </div>
         <h2>Co to jest Smovey?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores mollitia magnam quae odit atque expedita laborum quidem culpa. Doloribus, reprehenderit.</p>
+        <p>Smovey to jedyny w swoim rodzaju przyrząd pochodzący z Austrii, służący celom ochrony zdrowia, terapeutyki oraz fitness.</p>
+        <p>Smovey to system pierścienia wibracyjnego, składający się z węzła spiralnego, 4 kulek stalowych i uchwytu z elementami tłumienia drgań.</p>
       </div>
     </div>
-        
-    <div class="medium-6 columns text-center">
+
+    <div class="medium-6 columns text-center"  >
       <div class="card">
         <div class="round-icon">
           <span class="fi-torso-female"></span>
-          <span class="fi-torsos-all"></span>
           <span class="fi-torso"></span>
         </div>
         <h2>Dla kogo?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores mollitia magnam quae odit atque expedita laborum quidem culpa. Doloribus, reprehenderit.</p>
+        <p>Z ćwiczeń ze smovey mogą korzystać osoby w każdym wieku i o różnej kondycji fizycznej. Ćwiczenia nadają się dla młodych i starszych osób o dobrej kondycji fizycznej lub cierpiącym na różne dolegliwości.</p>
+        <p>Aktywacja poprzez wibracje ze Smovey "od przedszkola do seniora".</p>
       </div> 
     </div>
 
-    <div class="columns">
+    <div class="medium-6 columns text-center"  data-animate="fadeInUp">
       <div class="card">
-        <div class="round-icon text-center">
+        <div class="round-icon">
+          <span class="fi-info"></span>
+        </div>
+        <h2>Jak działa?</h2>
+        <p>Poprzez ruch do przodu, a następnie ruch przeciwny 4 ruchome kulki stalowe zaczynają się swobodnie poruszać, uderzając przy tym w sposób pulsacyjny w rowki i wzniesienia spirali z częstotliwością ok 60Hz. Odpowiada ona częstotliwości zdrowego człowieka i powoduje u użytkownika odczuwalne wibracje na powierzchni dłoni.</p>
+
+      </div>
+    </div>
+
+    <div class="medium-6 columns text-center"  data-animate="fadeInUp">
+      <div class="card">
+        <div class="round-icon">
           <span class="fi-play"></span>
           <h2>Jak zacząć?</h2>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores mollitia magnam quae odit atque expedita laborum quidem culpa. Doloribus, reprehenderit.</p>
+        <p>Nic prostszego! Wystarczą Twoje chęci. Skontaktuj i zapisz się już dziś!</p>
+        <p>Dzięki treningom ze Smovey odkryjesz nową forme aktywności. Smovey to gimnastyka na poziomie komórkowym, treningi są przeznaczone dla wszystkich chących zadbać o swoje zdrowie, ciało i dobry humor. Gwarancje doskonałego samoczucia i świetnej zabawy!</p>
       </div>
     </div>
   
@@ -175,10 +190,7 @@
 <section class="sm-highlights parallax">
   
   <div class="row">
-    
-
-
-    <div class="medium-6 large-4 columns wow zoomIn">
+    <div class="medium-6 large-4 columns" data-animate="fadeInLeft">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-graph-bar"></span>
@@ -190,7 +202,7 @@
       </div>
     </div>
 
-    <div class="medium-6 large-4 columns wow zoomIn">
+    <div class="medium-6 large-4 columns" data-animate="fadeIn">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-clock"></span>
@@ -201,7 +213,7 @@
       </div>
     </div>
 
-    <div class="medium-6 large-4 columns wow zoomIn">
+    <div class="medium-6 large-4 columns" data-animate="fadeInRight">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-plus"></span>
@@ -210,7 +222,7 @@
       </div>
     </div>
 
-    <div class="medium-6 columns wow bounceInLeft">
+    <div class="medium-6 columns" data-animate="fadeInLeft">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-star"></span>
@@ -219,7 +231,7 @@
       </div>
     </div>
 
-    <div class="medium-6 columns wow bounceInRight">
+    <div class="medium-6 columns" data-animate="fadeInRight">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-heart"></span>
@@ -228,7 +240,7 @@
       </div>
     </div>
 
-    <div class="medium-6 large-4 columns wow zoomIn">
+    <div class="medium-6 large-4 columns" data-animate="fadeInLeft">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-like"></span>
@@ -237,7 +249,7 @@
       </div>
     </div> 
     
-    <div class="medium-6 large-4 columns wow zoomIn">
+    <div class="medium-6 large-4 columns" data-animate="fadeIn">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-refresh"></span>
@@ -246,7 +258,7 @@
       </div>
     </div> 
 
-    <div class="medium-6 large-4 columns wow zoomIn">
+    <div class="medium-6 large-4 columns" data-animate="fadeInRight">
       <div class="sm-highlight text-center">
         <div class="icon">
           <span class="fi-checkbox"></span>
@@ -254,6 +266,35 @@
           <p><b>Wzmacnia</b> układ sercowo-naczyniowy.</p>
       </div>
     </div> 
+    
+    <div class="small-12 columns " data-animate="fadeInUp">
+      <div class="sm-highlight text-center">
+        <h3>Ponadto, Smovey ma zastosowanie: </h3>
+         
+        <p class="fi-plus large-6 columns more"> <span>Zapobiega bólom kręgosłupa</span></p>
+        <p class="fi-plus large-6 columns more"> <span>Poprawia koordynacje ruchową oraz kondycję</span></p>
+        <p class="fi-plus large-3 columns more"> <span>Fitness</span></p>
+        <p class="fi-plus large-3 columns more"> <span>Profilaktyka</span></p>
+        <p class="fi-plus large-3 columns more"> <span>Rehabilitacja</span></p>
+        <p class="fi-plus large-3 columns more"> <span>Odchudzanie</span></p>
+        
+        
+      </div> 
+        
+    </div> 
+
+
+    <div class="small-12 columns " data-animate="fadeInUp">
+      <div class="sm-highlight text-center ">
+        <h3>Chcesz wiedzieć więcej? Zapraszam na:</h3>
+ 
+        <a href="http://youtube.com" target="_blank" class="large-6 columns more" alt="Strona Youtube"><i class="fi-social-youtube"></i></a>
+        <a href="http://www.smovey.com" target="_blank" class="large-6 columns more" alt="Strona Youtube"><i class="fi-web"></i></a>
+  
+      </div> 
+        
+    </div> 
+    
 
 
   </div>
@@ -262,71 +303,108 @@
 </section>
 
 <section class="sm-offer">
-<div class="row collapse">
-
-  <div class="sm-section-header text-center">
+  <div class="sm-section-header row text-center">
     <h2>Co oferuje?</h2>
   </div>
 
-  <div class="medium-3 columns">
-    <ul class="tabs vertical" id="sm-vert-tabs" data-tabs>
-      <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Trening ze Smovey</a></li>
-      <li class="tabs-title"><a href="#panel2v">Masaż</a></li>
-      <li class="tabs-title"><a href="#panel3v">Kupno Smovey</a></li>
-    </ul>
-    </div>
-    <div class="medium-9 columns">
-    <div class="tabs-content vertical" data-tabs-content="sm-vert-tabs">
-      <div class="tabs-panel is-active" id="panel1v">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident non harum, quia unde quo assumenda minus autem numquam tempora mollitia aliquid, cum dicta nemo ea hic dolorum! Quidem impedit hic, cum ut nisi ad suscipit fuga corporis! Nam odit voluptatem ipsam cum molestias facilis, similique, recusandae asperiores est, repudiandae sint natus vitae odio qui, perferendis. Adipisci unde itaque veniam illum vitae suscipit ullam atque quaerat, repellat aspernatur accusamus sunt hic placeat, sequi, velit fugit fuga quod deleniti quibusdam explicabo laudantium cumque non earum. Sit odit repellat quidem itaque omnis cum nobis voluptatem laborum fugit. Corporis inventore dolorum tempore quaerat perspiciatis!</p>
+  <div class="row collapse" data-animate="fadeInUp">
+    <div class="medium-3 columns">
+      <ul class="tabs vertical" id="sm-vert-tabs" data-tabs>
+        <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Trening ze Smovey</a></li>
+        <li class="tabs-title"><a href="#panel2v">Masaż</a></li>
+        <li class="tabs-title"><a href="#panel3v">Kupno Smovey</a></li>
+      </ul>
       </div>
-      <div class="tabs-panel" id="panel2v">
-        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-      </div>
-      <div class="tabs-panel" id="panel3v">
-        <!-- <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg"> -->
+      <div class="medium-9 columns">
+      <div class="tabs-content vertical text-center" data-tabs-content="sm-vert-tabs">
+        <div class="tabs-panel is-active" id="panel1v">
+          <img src="img/zalety.jpg" alt="">
+          <p>Trening grupowy: <span>60min - 10zł</span></p>
+          <p>Trening indywidualny: <span>60min - 40zł</span></p>
+          <a href="#" class="large button" id="sign">Zapisz się już dziś!</a>
+        </div>
+        <div class="tabs-panel" id="panel2v">
+          <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+        </div>
+        <div class="tabs-panel" id="panel3v">
+          <!-- <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg"> -->
+        </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 
-<section class="sm-about">
-sm-about
-s
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-koniec sm-about
+<section class="sm-about parallax">
+  <div class="sm-section-header row text-center ">
+    <h2>Kim jestem?</h2>
+  </div>
+
+  <div class="row ">
+    
+    <div class="medium-4 columns">
+    
+      <div class="box">
+
+        <div class="box-icon">
+          <img src="img/miniaturka.png" class="text-center">
+        </div>
+        
+        <div class="info text-center">
+          <h4 class="">Renata Idziak</h4>
+          <br>
+          <p>Tytuł Smovey Coach w Smovey GMBH - Austria</p>
+          <a href="#" class="small button" id="certyfikat">Certyfikat</a>
+          <br><br><br><br>
+        </div>
+
+      </div>
+
+    </div>
+  
+  <div class="medium-8 columns text-center">
+    <div class="box">
+      <h4>Kilka słów o mnie</h4>
+      <p>Ukończyłam medyczne studium zawodowe, szkołę wyższą im. Pawła JAKIEGOŚTAM w Płocku, zdobywam wiedzę na kursach i szkoleniach z zakresu ochrony zdrowia i masażu.</p>
+
+      <h4>Przygoda ze Smovey</h4>
+      <p>Rok temu poznałam przyrząd Smovey, czyli Vibroswing System i stwierdziłam, że z tym przyrządem mogę pomóc sobie i innym. W tym roku ukończyłam kurs i zdobyłam <b>certyfikat Smovey Coach</b>.</p>
+      <p>Zapraszam do wspólnych ćwiczeń ale też do świetnej zabawy! <b>Smovey aktywuje, wzmacnia, koordynuje i rozluźnia.</b></p>
+    </div>
+  </div>
+
+    
+
+  </div>
+
 </section>
 
-<section class="sm-opinions">
-  <div class="row">
-      
+<section class="sm-opinions" >
+
     <!-- tytuł -->
-    <div class="sm-section-header text-center">
+    <div class="sm-section-header row text-center">
       <h2>Dlaczego warto?</h2>
       <p>Niektórzy już zmienili swoje życie na lepsze!</p>
     </div>
-        
-        <!-- opinie -->
+
+  <div class="row" data-animate="fadeInUp">
+      
+    <!-- opinie alert -->
+    <div class="opinions-content-alert text-center">
+      <div class="alert callout" data-closable>
+        <p>Seckja dostępna tylko dla większych ekranów (>639px)</p>
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <!-- opinie -->
     <div class="opinions-content text-center">
       <ul class="bxslider" id="opinions-slider">
         <li>
-          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae. Donec alit urna scelerisque ac."</i></p>
-          <h4>Tadeusz Pierwszy</h4>
+          <p><i>Chwilowo brak</i></p>
+          <h4></h4>
         </li>
-        <li>
-          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae. Donec alit urna scelerisque ac."</i></p>
-          <h4>Tadeusz Drugi</h4>
-        </li>
-        <li>
-          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae; Donec alit urna scelerisque ac."</i></p>
-          <h4>Tadeusz Trzeci</h4>
-        </li>
-        <li>
-          <p><i>"Vestibulum ante ipsum primis in lum ante ipsum primis in faucibus orci orci lum ante luctus et ultrices posuere cubilia Curae. Donec alit urna scelerisque ac."</i></p>
-          <h4>Tadeusz Czwarty</h4>
-        </li>
+
       </ul>
     </div>
       
@@ -336,29 +414,35 @@ koniec sm-about
 <section class="sm-contact">
   <div class="row">
 
-    <div class="medium-6 columns text-left">
+    <div class="medium-6 columns text-left" data-animate="fadeInLeft">
       <h2>Active Time</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ipsam soluta in, delectus laborum ratione distinctio expedita quo tempore! Eligendi culpa quos tenetur, possimus nam dolorum, deserunt laborum, doloribus id enim laudantium sunt accusamus natus alias provident, vel. Ratione, ex.</p>
     </div>
-    <div class="medium-6 columns text-right">
+    <div class="medium-6 columns text-right" data-animate="fadeInRight">
       <h3>Nie czekaj i skontaktuj się już dziś!</h3>
-      <p>Tel: <span><i>605 656 404</i></span></p>
-      <p>E-mail: <span><i>cos_tam@gmail.com</i></span></p>
+
+      <div class="icon medium-6 columns">
+        <p>Tel:<br><span><i>605 656 404</i></span></p>
+      </div>
+      
+      <div class="icon medium-6 columns">
+        <p>E-mail:<br><span><i>pa.idziak@gmail.com</i></span></p>
+      </div>  
     </div>
   </div>
   
 </section>
 
-<section class="sm-social">
+<section class="sm-social" >
     <div class="row">
     <div class="medium-6 columns text-center">
-      <div class="icon">
+      <div class="icon" data-animate="fadeInUp">
         <a href="http://facebook.com" target="_blank" class="fi-social-facebook"><i class="icon-youtube"></i></a>
       </div>
     </div>
      
     <div class="medium-6 columns text-center">
-      <div class="icon">
+      <div class="icon" data-animate="fadeInUp">
         <a href="http://youtube.com" target="_blank" class="fi-social-youtube"><i class="icon-youtube"></i></a>
       </div>
     </div>
@@ -367,7 +451,7 @@ koniec sm-about
 </section>
 
 <footer class="sm-footer">
-  <div class="row text-center">
+  <div class="row text-center" >
       <p>Copyright Paweł Idziak &copy; 2016</p>
       <span>pa.idziak@gmail.com</span>
   </div>
@@ -386,5 +470,7 @@ koniec sm-about
   <script src="js/imagesloaded.pkgd.min.js"></script>
         <!-- bxSlider Javascript file -->
     <script src="js/jquery.bxslider.min.js"></script>
+    <!-- Viewport Checker -->
+    <script src="js/jquery.viewportchecker.js"></script>
   </body>
 </html>
