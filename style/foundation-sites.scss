@@ -1,4 +1,5 @@
 @import 'foundation/foundation.scss';
 @import 'foundation/settings/_settings.scss';
 
-@include foundation-everything;
+@include foundation-everything();
+

@@ -81,40 +81,18 @@
 	height: $px;
 }
 //pozycjonowanie w pionie, od topa
-@mixin poisitonFromTop($top){
+@mixin positionFromTop($top){
 	position: absolute;
 	top: $top;
 	transform: translateY(-50%);
 }
-//pozycjonowanie w poziomie, od topa
-@mixin poisitonFromLeft($left){
+//pozycjonowanie w poziomie, od lewej
+@mixin positionFromLeft($left){
 	position: absolute;
 	left: $left;
 	transform: translateX(-50%);
 }
 
-
-
-
-/* .icon-left{
-	@include breakpoint(small only){
-		text-align: center;
-
-	}
-	@include breakpoint(medium){
-		float: left;
-	}	
-}
-.icon-right{
-	@include breakpoint(small only){
-		text-align: center;
-
-	}
-	@include breakpoint(medium){
-		float: right;
-		text-align: right;
-	}	
-} */
 
 
 // potrzebne do karty

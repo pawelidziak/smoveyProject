@@ -77,6 +77,11 @@ var przewijanie = function(){
 	$('#sign').click(function() { $.scrollTo($('.sm-contact'), 1000); });
 }
 
+var klik = function(){
+		$('.fotorama__fullscreen-icon').click(function() {
+		console.log('duap');
+	});
+}
 // ################################################
 // #################
 // ################# START 
@@ -84,7 +89,7 @@ var przewijanie = function(){
 // ################################################ 
 
 $(document).ready(function(){
-	
+
 	// do animacji WOW
 	wow = new WOW({
 		offset: 200
@@ -93,7 +98,7 @@ $(document).ready(function(){
 
     // wywolanie funkcji
 	przewijanie();
-
+	klik();
    	// funkcje operujace na scrollu trzeba wywolac ponownie
     $(window).scroll(function() {
         stickyNav();
@@ -114,7 +119,7 @@ $(document).ready(function(){
 
 
 
-		/* viewport */
+/* viewport */
 	// dzialanie: kazdy element z klasa data-animate zostaje ukryty, a nastepnie wyswietlony z animacja gdy do niego przewiniemy
 	$('*[data-animate]').addClass('hide-animate').each(function(){
 		$(this).viewportChecker({
@@ -123,5 +128,10 @@ $(document).ready(function(){
 			offset: 200 			//opoznienie w ms
 		});
 	});
+
+
+
+
+
 });
 

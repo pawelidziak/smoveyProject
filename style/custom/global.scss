@@ -128,11 +128,3 @@ body{
 	opacity: 1;
 }
 
-.s{
-	float: left;
-			display: block;
-			color: $sm-accent-color-2;
-			@include breakpoint(small only){
-				float: none;
-			}
-}

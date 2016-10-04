@@ -9,9 +9,8 @@
     <!-- SKOMPILOWANY CSS -->
     <link rel="stylesheet" href="style/main.css" />
      
-    <!-- motion us -->
+    <!-- motion ui -->
     <link rel="stylesheet" href="css/motion-ui.min.css" />
-
     
     <!-- Ikony -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
@@ -24,6 +23,9 @@
     <link rel="stylesheet" href="css/animate.css" type="text/css">
     <!-- bxSlider CSS file -->
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    
+    <!-- Fotorama -->
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
 
 
   </head>
@@ -54,7 +56,7 @@
           <li><a href="#" id="sm-highlights">Zalety</a></li>
           <li><a href="#" id="sm-offer">Oferta</a></li>
           <li><a href="#" id="sm-about">O mnie</a></li>
-          <li><a href="#" id="sm-opinions">Opinie</a></li>
+          <li><a href="#" id="sm-opinions">Galeria</a></li>
           <li><a href="#" id="sm-contact">Kontakt</a></li>
         </ul>
       </div>
@@ -66,7 +68,7 @@
           <li><a href="#" id="sm-highlights">Zalety</a></li>
           <li><a href="#" id="sm-offer">Oferta</a></li>
           <li><a href="#" id="sm-about">O mnie</a></li>
-          <li><a href="#" id="sm-opinions">Opinie</a></li>
+          <li><a href="#" id="sm-opinions">Galeria</a></li>
           <li><a href="#" id="sm-contact">Kontakt</a></li>
         </ul>
       </div>
@@ -80,15 +82,15 @@
 <!-- SLIDER -->
 <section class="sm-slider">
   <div class="orbit" role="region" data-orbit>
-    <ul class="orbit-container">
+    <ul class="orbit-container" data-orbit>
       
       <!-- Jeden slajd -->
       <li class="orbit-slide" id="slide_1">    <!-- klasa narzucona, id swoje -->
         <div class="row">                       <!-- centrujemy -->
         <!-- lewa strona slajdu -->
           <div class="medium-12 columns slajdTlo text-center">        <!-- po lewej stronie zajmujemy 8kolumn -->
-            <h1>Responsive</h1>
-            <p>Mobilne oraz desktop</p>
+            <h1>Active time!</h1>
+            <p>Zmień swoje życie na lepsze</p>
             <a href="#" class="large button animated pulse">Dowiedz się więcej!<i class="fi-arrow-down"></i></a>
           </div>
           </div>
@@ -99,8 +101,8 @@
       <li class="orbit-slide" id="slide_2">
         <div class="row">
           <div class="medium-8 columns slajdTlo">
-            <h1>Foundation</h1>
-            <p>Mobilne oraz desktop</p>
+            <h1>Smovey</h1>
+            <p>Niesamowity przyrząd</p>
             <a href="#" class="large button animated pulse">Dowiedz się więcej!<i class="fi-arrow-down"></i></a>
           </div>
           <div class="medium-4 columns show-for-medium">
@@ -110,9 +112,9 @@
       </li>
 
       <!-- Jeden slajd -->
-      <li class="orbit-slide" id="slide_3">
+      <li class="orbit-slide " id="slide_3">
         <div class="row">
-          <div class="medium-8 columns slajdTlo">
+          <div class="medium-8 columns  slajdTlo">
             <h1>Style SASS</h1>
             <p>Mobilne oraz desktop</p>
             <a href="#" class="large button animated pulse">Dowiedz się więcej!<i class="fi-arrow-down"></i></a>
@@ -138,18 +140,18 @@
 <section class="sm-start">
   <div class="row">
         
-    <div class="medium-6 columns text-center" >
+    <div class="medium-6 columns text-center">
       <div class="card">
         <div class="round-icon">
           <span class="fi-info"></span>
         </div>
         <h2>Co to jest Smovey?</h2>
         <p>Smovey to jedyny w swoim rodzaju przyrząd pochodzący z Austrii, służący celom ochrony zdrowia, terapeutyki oraz fitness.</p>
-        <p>Smovey to system pierścienia wibracyjnego, składający się z węzła spiralnego, 4 kulek stalowych i uchwytu z elementami tłumienia drgań.</p>
+        <p>Smovey to system pierścienia wibracyjnego, składający się z węża spiralnego, 4 kulek stalowych i uchwytu z elementami tłumienia drgań.</p>
       </div>
     </div>
 
-    <div class="medium-6 columns text-center"  >
+    <div class="medium-6 columns text-center" >
       <div class="card">
         <div class="round-icon">
           <span class="fi-torso-female"></span>
@@ -208,7 +210,7 @@
           <span class="fi-clock"></span>
         </div>
         <div class="content">
-          <p><b>Witalizuje</b> ponad 100 milionów <b>komóek ciała</b>.</p>
+          <p><b>Witalizuje</b> ponad 100 milionów <b>komórek ciała</b>.</p>
         </div> 
       </div>
     </div>
@@ -269,20 +271,14 @@
     
     <div class="small-12 columns " data-animate="fadeInUp">
       <div class="sm-highlight text-center">
-        <h3>Ponadto, Smovey ma zastosowanie: </h3>
+        <h3>A ponadto</h3>
          
         <p class="fi-plus large-6 columns more"> <span>Zapobiega bólom kręgosłupa</span></p>
-        <p class="fi-plus large-6 columns more"> <span>Poprawia koordynacje ruchową oraz kondycję</span></p>
-        <p class="fi-plus large-3 columns more"> <span>Fitness</span></p>
-        <p class="fi-plus large-3 columns more"> <span>Profilaktyka</span></p>
-        <p class="fi-plus large-3 columns more"> <span>Rehabilitacja</span></p>
-        <p class="fi-plus large-3 columns more"> <span>Odchudzanie</span></p>
-        
-        
+        <p class="fi-plus large-6 columns more"> <span>Poprawia koordynację ruchową oraz kondycję</span></p>
+        <p class="fi-plus large-6 columns more"> <span>Redukuje tkankę tłuszczową</span></p>
+        <p class="fi-plus large-6 columns more"> <span>Poprawia pracę półkul mózgowych</span></p>
       </div> 
-        
     </div> 
-
 
     <div class="small-12 columns " data-animate="fadeInUp">
       <div class="sm-highlight text-center ">
@@ -290,48 +286,118 @@
  
         <a href="http://youtube.com" target="_blank" class="large-6 columns more" alt="Strona Youtube"><i class="fi-social-youtube"></i></a>
         <a href="http://www.smovey.com" target="_blank" class="large-6 columns more" alt="Strona Youtube"><i class="fi-web"></i></a>
-  
       </div> 
-        
     </div> 
     
-
-
   </div>
- 
-
 </section>
 
+
+<!-- SEKCJA OFERTA -->
 <section class="sm-offer">
   <div class="sm-section-header row text-center">
     <h2>Co oferuje?</h2>
   </div>
 
   <div class="row collapse" data-animate="fadeInUp">
+    
     <div class="medium-3 columns">
       <ul class="tabs vertical" id="sm-vert-tabs" data-tabs>
         <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Trening ze Smovey</a></li>
         <li class="tabs-title"><a href="#panel2v">Masaż</a></li>
         <li class="tabs-title"><a href="#panel3v">Kupno Smovey</a></li>
       </ul>
-      </div>
-      <div class="medium-9 columns">
+    </div>
+
+    <div class="medium-9 columns">
       <div class="tabs-content vertical text-center" data-tabs-content="sm-vert-tabs">
+        
+        <!-- TRENING ZE SMOVEY -->
         <div class="tabs-panel is-active" id="panel1v">
           <img src="img/zalety.jpg" alt="">
           <p>Trening grupowy: <span>60min - 10zł</span></p>
           <p>Trening indywidualny: <span>60min - 40zł</span></p>
           <a href="#" class="large button" id="sign">Zapisz się już dziś!</a>
         </div>
+        
+        <!-- MASAZ SMOVEY -->
         <div class="tabs-panel" id="panel2v">
           <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
         </div>
+       
+       <!-- KUPNO SMOVEY -->
         <div class="tabs-panel" id="panel3v">
-          <!-- <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg"> -->
+
+          <div class="sm-section-header text-center">
+            <h3>Zamów smovey</h3>
+            <ul class="no-bullet">
+              W każdym zestawie:
+              <li>komplet pierścieni wibracyjnych smovey,</li>
+              <li>płyta DVD z zestawem ćwiczeń,</li>
+              <li>broszura informacyjna</li>
+            </ul>
+          </div>
+
+          <div class="row align-middle card">
+            <div class="medium-6 columns">
+              <div class="sk-single-offer text-center">
+                <span class="sk-offer-title">CLASSIC</span>
+                <ul class="no-bullet">
+                  <li>Wyjątkowe urządzenie dla zdrowia / fitnessu oraz terapii o austriackiej tożsamości</li>
+                  <li>Standardowa wersja Pierścieni Wibracyjnych – smovey z uchwytem z gumy piankowej</li>
+                </ul>
+                <span class="sk-offer-price"><span>440zł</span></span>
+              </div>
+            </div>
+            <div class="medium-6 column align-middle">
+              <img src="img/smoveyClassic.jpg" alt="Smovey Classic">
+            </div>
+          </div> 
+
+          <div class="row card">
+            <div class="medium-6 columns">
+              <div class=" sk-single-offer text-center">
+                <span class="sk-offer-title">AQUA</span>
+                <ul class="no-bullet">
+                  <li>Stworzone specjalnie dla gimnastyki w wodzie</li>
+                  <li>Zastosowanie wysokiej jakiści klejów przemysłowych chroni smovey przed wnikaniem wody</li>
+                  <li>Jest odpowiednie do stosowania w słonej wodzie.</li>
+                  <li>Uchwyt z gumy piankowej</li>
+                </ul>
+                 <span class="sk-offer-price"><span>530zł</span></span>
+              </div>
+            </div>
+            <div class="medium-6 columns">
+              <img src="img/smoveyAqua.jpg" alt="Smovey Aqua">
+            </div>
+          </div> 
+
+          <div class="row card">
+            <div class="medium-6 columns">
+              <div class="sk-single-offer text-center">
+                <span class="sk-offer-title">SOLID</span>
+                <ul class="no-bullet">
+                  <li>Nowy, bardziej solidny uchwyt</li>
+                  <li>Wysoka trwałość i odporność</li>
+                  <li>Bardzo higieniczne i łatwe czyszczenie środkiem dezynfekującym</li>
+                  <li>leży szczególnie dobrze w dłoni (ergonomiczny uchwyt)</li>
+                  <li>przekazywanie drgań bardziej intensywnie</li>
+                </ul>
+                <span class="sk-offer-price"><span>530zł</span></span>
+              </div>
+            </div>
+            <div class="medium-6 column ">
+              <img src="img/smoveySolid.jpg" alt="Smovey Solid">
+            </div>
+          </div> 
+
         </div>
+
       </div>
     </div>
   </div>
+
+
 </section>
 
 <section class="sm-about parallax">
@@ -361,10 +427,10 @@
 
     </div>
   
-  <div class="medium-8 columns text-center">
+  <div class="medium-8 columns text-center sm-about-right">
     <div class="box">
       <h4>Kilka słów o mnie</h4>
-      <p>Ukończyłam medyczne studium zawodowe, szkołę wyższą im. Pawła JAKIEGOŚTAM w Płocku, zdobywam wiedzę na kursach i szkoleniach z zakresu ochrony zdrowia i masażu.</p>
+      <p>Ukończyłam Medyczne Studium Zawodowe, Szkołę Wyższą im. Pawła Włodkowica w Płocku, zdobywam wiedzę na kursach i szkoleniach z zakresu ochrony zdrowia i masażu.</p>
 
       <h4>Przygoda ze Smovey</h4>
       <p>Rok temu poznałam przyrząd Smovey, czyli Vibroswing System i stwierdziłam, że z tym przyrządem mogę pomóc sobie i innym. W tym roku ukończyłam kurs i zdobyłam <b>certyfikat Smovey Coach</b>.</p>
@@ -378,9 +444,9 @@
 
 </section>
 
-<section class="sm-opinions" >
+<!-- <section class="sm-opinions" >
 
-    <!-- tytuł -->
+    tytuł
     <div class="sm-section-header row text-center">
       <h2>Dlaczego warto?</h2>
       <p>Niektórzy już zmienili swoje życie na lepsze!</p>
@@ -388,7 +454,7 @@
 
   <div class="row" data-animate="fadeInUp">
       
-    <!-- opinie alert -->
+    opinie alert
     <div class="opinions-content-alert text-center">
       <div class="alert callout" data-closable>
         <p>Seckja dostępna tylko dla większych ekranów (>639px)</p>
@@ -397,7 +463,7 @@
         </button>
       </div>
     </div>
-    <!-- opinie -->
+    opinie
     <div class="opinions-content text-center">
       <ul class="bxslider" id="opinions-slider">
         <li>
@@ -409,6 +475,41 @@
     </div>
       
 </div>
+</section> -->
+
+<section class="sm-gallery sm-opinions">
+ 
+<div class="row">
+
+
+<div class="small-7 small-centered columns">
+  
+  <div class="sm-section-header row text-center ">
+    <h2>Galeria</h2>
+    <div class="warning callout" data-closable>
+      <p>Dla lepszego efektu, włącz tryb pełnoekranowy </p>
+      <p>(prawy góry róg zdjęcia).</p>
+      <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-fit="scaledown" data-width="100%" data-maxwidth="1200" data-autoplay="true" id="fotorama">
+    <img src="img/gallery/1.jpg">
+    <img src="img/gallery/2.jpg">
+    <img src="img/gallery/3.jpg">
+    <img src="img/gallery/4.jpg">
+    <img src="img/gallery/5.jpg">
+  </div>
+  
+</div>
+
+</div>
+
+
+
 </section>
 
 <section class="sm-contact">
@@ -457,20 +558,23 @@
   </div>
 </footer>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
 
     <!-- Scroll To -->
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/custom.js"></script>
-        <!-- Ladowanie obrazkow -->
-  <script src="js/imagesloaded.pkgd.min.js"></script>
-        <!-- bxSlider Javascript file -->
+    <!-- Ladowanie obrazkow -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <!-- bxSlider Javascript file -->
     <script src="js/jquery.bxslider.min.js"></script>
     <!-- Viewport Checker -->
     <script src="js/jquery.viewportchecker.js"></script>
+    <!-- motion us -->
+    <!-- <script src="js/motion-ui.min.js"></script> -->
   </body>
 </html>
